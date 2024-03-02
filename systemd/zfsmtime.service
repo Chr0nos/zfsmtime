@@ -1,0 +1,10 @@
+[Unit]
+Description=ZFS mtime updated
+After=zfs.target
+
+[Service]
+User=adamaru
+ExecStart=/usr/bin/zfsmtime watch /mnt/aiur/Video
+
+[Install]
+WantedBy=multi-user.target
